@@ -74,8 +74,7 @@ frontend/
 ```bash
 npm run build
 ```
-This creates an optimized build in the `dist/` directory.
-```
+
 
 
 
