@@ -2,6 +2,8 @@
 
 A modern task management application built with React, Vite, and TailwindCSS featuring drag-and-drop functionality.
 
+**Live Demo:** [https://sunstone-frontend-assignment.vercel.app/](https://sunstone-frontend-assignment.vercel.app/)
+
 ## Tech Stack
 
 - **React** 19.2.0 - UI library
@@ -16,7 +18,7 @@ A modern task management application built with React, Vite, and TailwindCSS fea
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/suman987654432/Sunstone_Frontend_Assignment
 cd frontend
 ```
 
