@@ -16,15 +16,15 @@ const Dashboard = () => {
   });
   const [sortBy, setSortBy] = useState("");
   const loadTasks = () => {
-    const saved = JSON.parse(localStorage.getItem("tasks")) || [];
+    let saved = JSON.parse(localStorage.getItem("tasks"));
+
     if (!saved || saved.length === 0) {
-      localStorage.setItem("tasks", JSON.stringify(Task));
-      setTasks(Task);
-    } else {
-      setTasks(saved);
+      saved = Task;
+      localStorage.setItem("tasks", JSON.stringify(saved));
     }
     setTasks(saved);
   };
+
   useEffect(() => {
     loadTasks();
   }, []);

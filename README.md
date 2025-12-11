@@ -75,11 +75,5 @@ npm run build
 This creates an optimized build in the `dist/` directory.
 ```
 
-### Deployment Options
 
-**Vercel**
-```bash
-npm install -g vercel
-vercel
-```
 
