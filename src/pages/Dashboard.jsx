@@ -102,6 +102,8 @@ const Dashboard = () => {
             loadTasks();
           }}
         />)}
+
+        
       <DragDropContext onDragEnd={handleDrag}>
         <div className="  flex flex-col lg:flex-row gap-3 md:gap-5 p-3 md:p-5 ">
           {/* To-Do Column */}
@@ -142,6 +144,8 @@ const Dashboard = () => {
           </Droppable>
 
 
+
+
           {/* In-Progress Column */}
 
           <Droppable droppableId="In-Progress">
@@ -178,6 +182,9 @@ const Dashboard = () => {
               </div>
             )}
           </Droppable>
+
+
+
 
           {/* Completed Column */}
 

@@ -43,7 +43,7 @@ const Navbar = ({ onAddTask, onFilter, onSort }) => {
 
       </div>
 
-      {/* Add Button */}
+    
       <button
         onClick={onAddTask}
         className="px-4 py-2 text-sm md:text-base bg-blue-600 text-white rounded-md hover:bg-blue-700 whitespace-nowrap"

@@ -10,6 +10,7 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
                 ? "bg-yellow-500"
                 : "bg-green-600";
 
+                
     return (
         <div className="bg-white shadow rounded-xl p-5 border border-gray-200 hover:shadow-md transition mb-4">
 
@@ -27,6 +28,8 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
                     {status}
                 </span>
             </div>
+
+
 
         
             <h3 className="text-xl font-semibold mt-3 text-gray-900">{title}</h3>
@@ -46,6 +49,7 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
                     <span>{format(new Date(createdAt), "dd MMM yyyy")}</span>
                 </p>
             </div>
+
 
            
             <div className="flex gap-4 mt-4">

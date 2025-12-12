@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 const TaskForm = ({ editingTask, onSave }) => {
     const [input, setInput] = useState({
         title: "",
@@ -21,6 +20,8 @@ const TaskForm = ({ editingTask, onSave }) => {
         setInput((prev) => ({ ...prev, [name]: value }));
     };
 
+
+    
     const handleSubmit = () => {
         if (!input.title || !input.description || !input.dueDate) {
             alert("Please fill all fields");
@@ -48,6 +49,9 @@ const TaskForm = ({ editingTask, onSave }) => {
         alert("Task Added!");
         onSave();
     };
+
+
+
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-50">
