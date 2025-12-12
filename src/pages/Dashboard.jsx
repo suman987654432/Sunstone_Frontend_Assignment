@@ -45,7 +45,7 @@ const Dashboard = () => {
     setTasks(updatedTasks);
   }
   // sort and filter logic 
-  const getProcessedTasks = () => {
+  const TaskProcess = () => {
     let result = [...tasks];
 
     if (filters.priority) {
@@ -92,7 +92,11 @@ const Dashboard = () => {
         onFilter={(type, value) =>
           setFilters((prev) => ({ ...prev, [type]: value }))
         }
-        onSort={(value) => setSortBy(value)} />
+        onSort={(value) => setSortBy(value)}
+        onReset={() => {
+          setFilters({ priority: "", dueDate: "", status: "" });
+          setSortBy("");
+        }} />
       {showForm && (
         <TaskForm
           editingTask={editingTask}
@@ -116,7 +120,7 @@ const Dashboard = () => {
               >
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-center">To-Do</h3>
 
-                {getProcessedTasks().filter((t) => t.status === "To-Do")
+                {TaskProcess().filter((t) => t.status === "To-Do")
                   .map((task, index) => (
                     <Draggable key={task.id} draggableId={String(task.id)} index={index}>
                       {(p) => (
@@ -157,7 +161,7 @@ const Dashboard = () => {
               >
 
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-center">In-Progress</h3>
-                {getProcessedTasks().filter((t) => t.status === "In-Progress")
+                {TaskProcess().filter((t) => t.status === "In-Progress")
                   .map((task, index) => (
                     <Draggable key={task.id} draggableId={String(task.id)} index={index}>
                       {(p) => (
@@ -197,7 +201,7 @@ const Dashboard = () => {
               >
 
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:md-3 text-center">Completed</h3>
-                {getProcessedTasks().filter((t) => t.status === "Completed")
+                {TaskProcess().filter((t) => t.status === "Completed")
                   .map((task, index) => (
                     <Draggable key={task.id} draggableId={String(task.id)} index={index}>
                       {(p) => (

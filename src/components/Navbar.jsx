@@ -1,4 +1,6 @@
-const Navbar = ({ onAddTask, onFilter, onSort }) => {
+import { MdRefresh } from "react-icons/md";
+
+const Navbar = ({ onAddTask, onFilter, onSort, onReset }) => {
   return (
     <nav className="flex flex-col md:flex-row items-center justify-between gap-3 px-4 md:px-6 py-3 bg-gray-200 border-b border-gray-300 sticky top-0 z-10">
       <h2 className="text-xl font-semibold">Task Manager</h2>
@@ -40,6 +42,14 @@ const Navbar = ({ onAddTask, onFilter, onSort }) => {
           <option value="newest">Newest First</option>
           <option value="closest">Closest Due Date</option>
         </select>
+
+        <button
+          onClick={onReset}
+          className="px-3 py-1 text-sm md:text-base bg-red-500 text-white rounded-md hover:bg-red-600 transition flex items-center gap-1"
+          title="Reset Filters"
+        >
+          <MdRefresh size={20} />
+        </button>
 
       </div>
 
