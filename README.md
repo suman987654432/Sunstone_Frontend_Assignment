@@ -1,10 +1,10 @@
-# Sunstone Frontend
+# Task Manager
 
 A modern task management application built with React, Vite, and TailwindCSS featuring drag-and-drop functionality.
 
 **Live Demo:** [https://sunstone-frontend-assignment.vercel.app/](https://sunstone-frontend-assignment.vercel.app/)
 
-# Add Task Feature
+# Features
 
 - Click on "Add New Task" button.
 - Fill in the task details (Title, Description, Priority, Status, Due Date).
