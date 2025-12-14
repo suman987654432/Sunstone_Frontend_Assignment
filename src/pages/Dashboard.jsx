@@ -15,6 +15,9 @@ const Dashboard = () => {
     status: "",
   });
   const [sortBy, setSortBy] = useState("");
+
+
+  // load tasks from local storage
   const loadTasks = () => {
     let saved = JSON.parse(localStorage.getItem("tasks"));
 
@@ -29,11 +32,16 @@ const Dashboard = () => {
     loadTasks();
   }, []);
 
+
+  //delete task
   const deleteTask = (id) => {
     const filtered = tasks.filter((s) => s.id !== id);
     localStorage.setItem("tasks", JSON.stringify(filtered));
     setTasks(filtered);
   }
+
+
+  //drag and drop handle
   const handleDrag = (result) => {
     const { source, destination, draggableId } = result;
     if (!destination) return;
@@ -44,6 +52,8 @@ const Dashboard = () => {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     setTasks(updatedTasks);
   }
+
+
   // sort and filter logic 
   const TaskProcess = () => {
     let result = [...tasks];
@@ -85,6 +95,9 @@ const Dashboard = () => {
 
     return result;
   };
+
+
+  
 
   return (
     <>

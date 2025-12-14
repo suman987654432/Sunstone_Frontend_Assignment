@@ -4,6 +4,14 @@ A modern task management application built with React, Vite, and TailwindCSS fea
 
 **Live Demo:** [https://sunstone-frontend-assignment.vercel.app/](https://sunstone-frontend-assignment.vercel.app/)
 
+# Add Task Feature
+
+- Click on "Add New Task" button.
+- Fill in the task details (Title, Description, Priority, Status, Due Date).
+- Click "Add Task" to save the task.
+- The new task will appear on the dashboard and is stored in your browser (localStorage).
+- You can drag a task card and drop it into another status column (e.g., To-Do, In-Progress,     Completed).
+
 ## Tech Stack
 
 - **React** 19.2.0 - UI library
@@ -46,7 +54,7 @@ The application will be available at `http://localhost:5173`
 
 ```
 frontend/
-├── public/              # Static assets
+├── public/              
 ├── src/
 │   ├── assets/         # Images, icons, etc.
 │   ├── components/     # Reusable components
@@ -59,8 +67,8 @@ frontend/
 │   ├── App.jsx         # Main app component
 │   ├── main.jsx        # Entry point
 │   └── index.css       # Global styles & Tailwind imports
-├── eslint.config.js    # ESLint configuration
-├── postcss.config.js   # PostCSS configuration
+├── eslint.config.js    
+├── postcss.config.js  
 ├── tailwind.config.js  # TailwindCSS configuration
 ├── vite.config.js      # Vite configuration
 ├── index.html          # HTML entry point

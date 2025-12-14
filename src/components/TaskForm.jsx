@@ -15,13 +15,14 @@ const TaskForm = ({ editingTask, onSave }) => {
         }
     }, [editingTask]);
 
+    //handle input chnage
     const handleInput = (e) => {
         const { name, value } = e.target;
         setInput((prev) => ({ ...prev, [name]: value }));
     };
 
 
-    
+    //handle form submit
     const handleSubmit = () => {
         if (!input.title || !input.description || !input.dueDate) {
             alert("Please fill all fields");
@@ -33,12 +34,14 @@ const TaskForm = ({ editingTask, onSave }) => {
             const updated = saved.map((task) =>
                 task.id === editingTask.id ? { ...input } : task
             );
-
+            // Save updated tasks 
             localStorage.setItem("tasks", JSON.stringify(updated));
             alert("Task Updated");
             onSave();
             return;
         }
+
+        // Create new task
         const newTask = {
             ...input,
             id: Date.now(),
@@ -52,6 +55,7 @@ const TaskForm = ({ editingTask, onSave }) => {
 
 
 
+    
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-50">

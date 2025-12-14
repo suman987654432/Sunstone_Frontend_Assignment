@@ -1,5 +1,4 @@
 import { MdRefresh } from "react-icons/md";
-
 const Navbar = ({ onAddTask, onFilter, onSort, onReset }) => {
   return (
     <nav className="flex flex-col md:flex-row items-center justify-between gap-3 px-4 md:px-6 py-3 bg-gray-200 border-b border-gray-300 sticky top-0 z-10">
